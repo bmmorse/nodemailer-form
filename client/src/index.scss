@@ -1,0 +1,125 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+$_blue: #00c3ff;
+$_black: #333333;
+$_yellow: #ffee00;
+$_green: #80ff7e;
+$_red: #ff5656;
+
+* {
+  box-sizing: border-box;
+  color: $_black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+#App {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 80%;
+  padding: 4em 2em;
+
+  h2 {
+    font-weight: 400;
+    margin-bottom: 2em;
+  }
+
+  a {
+    color: $_red;
+  }
+
+  .header-email {
+    text-decoration: underline;
+    color: $_red;
+  }
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  grid-template-areas:
+    'name'
+    'email'
+    'message'
+    'submit';
+
+  label {
+    display: block;
+    width: 100%;
+    font-weight: 100;
+    margin: 2px 0 0 2px;
+  }
+
+  textarea,
+  input {
+    padding: 1em;
+    font-size: 1em;
+    border: 4px solid $_blue;
+    border-radius: 2px;
+    display: block;
+    width: 100%;
+    transition: 200ms ease background;
+  }
+
+  textarea:hover,
+  input:hover {
+    border: 4px solid $_yellow;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: solid 4px $_green;
+  }
+
+  .form-name {
+    grid-area: name;
+  }
+  .form-email {
+    grid-area: email;
+  }
+  .form-message {
+    grid-area: message;
+  }
+  .form-submit {
+    grid-area: submit;
+    margin-top: 1em;
+    text-transform: uppercase;
+    padding: 2em 0;
+    border: none;
+    background: $_blue;
+    font-weight: 400;
+    font-size: 22px;
+    color: white;
+    transition: 200ms ease background;
+  }
+  .form-submit:focus {
+    outline: none;
+  }
+  .form-submit:hover {
+    background: $_yellow;
+  }
+}
+
+@media (min-width: 600px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+      'name email'
+      'message message'
+      'submit submit';
+  }
+}

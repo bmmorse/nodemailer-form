@@ -25,7 +25,13 @@ function App() {
 
                 <h2>
                   You can download the Github repo{' '}
-                  <a href='github.com'>here.</a>
+                  <a
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    href='https://github.com/bmmorse/nodemailer-form'
+                  >
+                    here.
+                  </a>
                 </h2>
                 <h2>
                   Form data is sent to{' '}

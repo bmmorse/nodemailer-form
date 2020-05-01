@@ -66,7 +66,7 @@ app.post('/send', (req, res) => {
     error ? console.log(error) : console.log(response);
     smtpTransport.close();
   });
-  response.redirect('/');
+  res.redirect('/');
 });
 
 // Always serve React's index.html
